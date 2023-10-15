@@ -1,0 +1,43 @@
+Tabela de Usuários:
+
+Esta tabela armazenará informações sobre os usuários que abrem chamados:
+
+ID do Usuário (Chave Primária)
+Nome de Usuário
+E-mail
+Senha (armazenada de forma segura e com criptografia)
+Nível de Acesso (para diferenciar entre "usuário" e "solucionador")
+Tabela de Chamados:
+
+Esta tabela armazenará informações sobre os chamados abertos pelos usuários:
+
+ID do Chamado (Chave Primária)
+ID do Usuário (Chave Estrangeira para a tabela de Usuários)
+Objeto do Chamado (hardware, helpdesk, instalação, etc.)
+Descrição do Chamado
+Anexos (se necessário, você pode armazenar os caminhos dos arquivos em vez dos arquivos em si)
+Status do Chamado (aberto, atribuído, pendente, solucionado, etc.)
+Tabela de Solucionadores:
+
+Esta tabela armazenará informações sobre os solucionadores (funcionários do suporte):
+
+ID do Solucionador (Chave Primária)
+Nome do Solucionador
+E-mail
+Senha (armazenada de forma segura e com criptografia)
+Nível de Acesso (para diferenciar entre "usuário" e "solucionador")
+Tabela de Atribuição de Chamados:
+
+Esta tabela é usada para atribuir chamados aos solucionadores:
+
+ID da Atribuição (Chave Primária)
+ID do Chamado (Chave Estrangeira para a tabela de Chamados)
+ID do Solucionador (Chave Estrangeira para a tabela de Solucionadores)
+Tabela de Notas de Chamados:
+
+Esta tabela pode ser usada para adicionar notas aos chamados:
+
+ID da Nota (Chave Primária)
+ID do Chamado (Chave Estrangeira para a tabela de Chamados)
+Conteúdo da Nota
+Data e Hora da Nota

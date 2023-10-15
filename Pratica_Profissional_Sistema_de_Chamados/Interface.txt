@@ -1,0 +1,20 @@
+1. Interface para Usuários:
+
+Página de Login: Usuários inserem suas credenciais (por exemplo, e-mail e senha).
+Página de Abertura de Chamados: Após o login bem-sucedido, os usuários serão redirecionados para uma página onde podem abrir novos chamados. Eles selecionam o objeto do chamado, descrevem a situação e anexam imagens, se necessário.
+Página de Visualização de Chamados: Os usuários podem ver uma lista de seus próprios chamados em aberto e o status de cada um.
+Não têm acesso a funcionalidades administrativas, como atribuir chamados a funcionários ou gerar relatórios.
+2. Interface para Solucionadores:
+
+Página de Login: Os solucionadores também inserem suas credenciais (e-mail e senha).
+Página de Controle de Chamados: Após o login, os solucionadores acessam uma página onde podem:
+Visualizar todos os chamados em aberto.
+Atribuir chamados a si mesmos.
+Atualizar o status dos chamados.
+Adicionar notas ou pendências.
+Página de Relatórios: Uma página que permite aos solucionadores gerar relatórios e gráficos relacionados aos chamados em aberto, solucionados, etc.
+Não têm acesso à funcionalidade de abertura de chamados.
+Implementação:
+
+A autenticação deve verificar o nível de acesso (usuário ou solucionador) com base nas credenciais fornecidas.
+Uma vez autenticados, os usuários são redirecionados para sua interface correspondente.
