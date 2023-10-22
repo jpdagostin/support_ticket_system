@@ -1,0 +1,192 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Arial", sans-serif; /* Alterando a fonte para Arial */
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a1919 50%, #5a3257 50%);
+    background-size: 100% 200%;
+    animation: wave 4s infinite;
+}
+
+.menu {
+    background: #b100a2; /* Alterando a transparência do menu */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.menu ul li {
+    margin-right: 20px;
+}
+
+.menu a {
+    color: #0a0a0a;
+    text-decoration: none;
+    font-size: 18px;
+    text-transform: uppercase; /* Tornando o texto em maiúsculo */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Adicionando transições */
+}
+
+.menu a:hover {
+    background-color: #5a3257; /* Tornando o botão mais escuro no hover */
+    color: #fffdfdad; /* Alterando a cor do texto no hover */
+}
+
+.menu a:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Efeito de afundar quando o botão é clicado */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 80px;
+    left: 400px;
+    right: 400px;
+    bottom: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Bordas arredondadas para o modal */
+    max-width: 80%; /* Definindo a largura máxima do modal */
+    margin: 0 auto; /* Centralizando o modal na tela */
+}
+
+.modal-content {
+    background: #5a3257;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Alinhar os campos verticalmente */
+    text-transform: uppercase;
+}
+
+.modal input {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.close-extract-buttons {
+    display: flex;
+    flex-direction: column; /* Botões e campos empilhados verticalmente */
+    align-items: center; /* Centralizando os botões e campos */
+    margin-top: 20px; /* Espaçamento entre os campos e os botões */
+}
+
+.close-modal, .extract-report {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.close-modal {
+    background: #bb1818;
+    margin-top: 10px; /* Espaçamento entre o botão "Fechar Modal" e os campos */
+    text-transform: uppercase;
+}
+
+.extract-report {
+    background: #169216; /* Alterando a cor do botão Extrair Relatório para verde */
+    text-transform: uppercase;
+}
+
+@keyframes wave {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+/* Estilo para o Histórico de Chamados */
+.historico-chamados {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Estilo para o título "Histórico de Chamados" */
+.historico-chamados h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo para a tabela de chamados */
+.historico-chamados table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilo para o cabeçalho da tabela */
+.historico-chamados th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilo para as células da tabela */
+.historico-chamados td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Estilo para as linhas pares da tabela */
+.historico-chamados tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilo para as linhas ímpares da tabela */
+.historico-chamados tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Estilo para os links nas células da tabela */
+.historico-chamados a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Estilo para os links quando o mouse está sobre eles */
+.historico-chamados a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
