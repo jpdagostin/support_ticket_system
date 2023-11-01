@@ -102,7 +102,7 @@ body, html {
     margin-top: 20px; /* Espaçamento entre os campos e os botões */
 }
 
-.close-modal, .extract-report {
+.close-modal, .extract-report, .extract-report-edit{
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -112,13 +112,13 @@ body, html {
 }
 
 .close-modal {
-    background: #bb1818;
+    background: #9b3e00;
     margin-top: 10px; /* Espaçamento entre o botão "Fechar Modal" e os campos */
     text-transform: uppercase;
 }
 
 .extract-report {
-    background: #169216; /* Alterando a cor do botão Extrair Relatório para verde */
+    background: #006300; /* Alterando a cor do botão Extrair Relatório para verde */
     text-transform: uppercase;
 }
 

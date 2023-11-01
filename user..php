@@ -1,3 +1,15 @@
+<?php
+if (isset($_POST['send'])) {
+    include_once('config.php');
+
+    $date = $_POST['date'];
+    $title = $_POST['title'];
+    $description = $_POST['description'];
+
+    $result = mysqli_query($conexao, "INSERT INTO users(dateStart, assunt, descriptionTicket) VALUES ('$date', '$title', '$description')");
+}
+?> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,16 +59,16 @@
     </div>
 
     <div class="modal" id="modal-raio-x" style="display: none;">
-        <div class="modal-content">
+        <form action="user.php" method="POST" class="modal-content">
             <h2>Novo chamado</h2>
             <hr>
-            <input type="date" placeholder="Data de hoje ...">
-            <input type="text" placeholder="Assunto ...">
-            <input type="text" placeholder="Descrição ...">
+            <input name="date" type="date" placeholder="Data de hoje ...">
+            <input name="title" type="text" placeholder="Assunto ...">
+            <input name="description" type="text" placeholder="Descrição ...">
             <hr>
-            <button class="extract-report">Enviar</button>
+            <button name="send" class="extract-report">Enviar</button>
             <button class="close-modal">Fechar</button>
-        </div>
+        </form>
     </div>
 
     <div class="modal" id="modal-status-veiculos" style="display: none;">
